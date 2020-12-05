@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer type=module>
+    import '../bkj-lit-menu.js'
+    import '../../bkj-icon/bkj-icon.js'
+    </script>
+    <style>
+        @import url('../../bkj-core/rgb-colors.css');
+        :root {
+            --bkj-icon-button-size: 48px;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100vw;
+            background-image: url('https://source.unsplash.com/random');
+        }
+
+        button {
+            outline: none;
+            border-style: none;
+            background-color: unset;
+            color: unset;
+            font: unset;
+        }
+
+        button:active {
+            padding: 0;
+        }
+
+        nav {
+            display: flex;
+            height: 80px;
+            width: 100%;
+            justify-content: flex-end;
+            align-items: center;
+            background: #242424;
+        }
+
+        bkj-menu {
+            margin: 5px;
+            width: 50px;
+            font-family: 'Open Sans';
+            --bkj-menu-width: 250px;
+            --bkj-menu-rad: 15px;
+            --bkj-menu-backcolor: rgba(var(--md-indigo-50),1);
+        }
+        bkj-menu span {
+            padding: 10px;
+        }
+        #toggle {
+            transition: transform .2s ease;
+        }
+        bkj-menu[open] #toggle {
+            transform: rotate(180deg)
+        }
+        nav>*:last-child {
+            margin-right: 15px;
+        }
+
+        .navbtn {
+            height: var(--bkj-icon-button-size);
+            width: var(--bkj-icon-button-size);
+            background: #797979;
+            border-radius: 50%;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        bkj-icon {
+            fill: #fafafa;
+        }
+
+        bkj-menu li {
+            display: grid;
+            align-items: center;
+            justify-items: flex-start;
+            grid-template-columns: max-content max-content auto;
+            grid-gap: 5px;
+        }
+
+        bkj-menu li .navbtn:last-child {
+            justify-self: end;
+            background-color: unset;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <button class="navbtn">
+            <bkj-icon name="heart"></bkj-icon>
+        </button>
+        <button class="navbtn">
+            <bkj-icon name="comment"></bkj-icon>
+        </button>
+        <button class="navbtn">
+            <bkj-icon name="chart-bubble"></bkj-icon>
+        </button>
+
+        <bkj-menu>
+            <bkj-icon id="toggle" slot="heading" name="chevron-down"></bkj-icon>
+           <ul data-path="/root">
+                <li data-path="root/options">
+                <button class="navbtn">
+                    <bkj-icon name="cog"></bkj-icon>
+                </button>
+                <div>goto option</div>
+                <button  class="navbtn">
+                    <bkj-icon size="36px" name="chevron-right"></bkj-icon>
+                </button>
+                </li>
+                <li data-path="root/alerts">
+                    <button class="navbtn">
+                        <bkj-icon name="message-alert"></bkj-icon>
+                    </button>
+                    <div>goto alerts</div>
+                </li>
+                <li >
+                    <button class="navbtn">
+                        <bkj-icon name="theme-light-dark"></bkj-icon>
+                    </button>
+                    <div>ici c'est base</div>
+                </li>
+                <li >
+                    <button class="navbtn">
+                        <bkj-icon name="logout"></bkj-icon>
+                    </button>
+                    <div>base</div>
+                </li>
+            </ul>
+            <ul slot="parts" data-path="root/options">
+                <li data-path="options/root">
+                    <button class="navbtn">
+                        <bkj-icon name="chevron-left"></bkj-icon>
+                    </button>
+                    <div>goto base</div>
+                </li>
+                <li data-path="options/nestedoptions">
+                    <button class="navbtn">
+                        <bkj-icon name="chevron-right"></bkj-icon>
+                    </button>
+                    <div>goto nested options</div>
+                </li>
+                <li >
+                    <button class="navbtn">
+                        <bkj-icon name="heart"></bkj-icon>
+                    </button>
+                    <div>goto nested options</div>
+                </li>
+                <li >
+                    <button class="navbtn">
+                        <bkj-icon name="heart"></bkj-icon>
+                    </button>
+                    <div>goto nested options</div>
+                </li>
+            </ul>
+            
+            <ul slot="parts" data-path="options/nestedoptions">
+                <li data-path="nestedoptions/options">
+                    <button class="navbtn">
+                        <bkj-icon name="chevron-left"></bkj-icon>
+                    </button>
+                    <div>goto options</div>
+                </li>
+            </ul>
+            <ul slot="parts" data-path="root/alerts">
+                <li data-path="alerts/root">
+                    <button class="navbtn">
+                        <bkj-icon name="chevron-left"></bkj-icon>
+                    </button>
+                    <div>go to base</div>
+                </li>
+                <li >
+                    <button class="navbtn">
+                        <bkj-icon name="chevron-left"></bkj-icon>
+                    </button>
+                    <div>alerte</div>
+                </li>
+            </ul>
+        </bkj-menu>
+    </nav>
+    
+</body>
+
+</html>

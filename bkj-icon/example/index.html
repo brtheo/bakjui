@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <script defer type=module>
+    import '../bkj-icon.js'
+    </script>
+    <script>
+    globalThis.bkj = {iconProvider: {fa:'https://raw.githubusercontent.com/FortAwesome/Font-Awesome/master/svgs/'}}
+    </script>
+    <style>
+        bkj-icon {
+            fill: red
+        }
+    </style>
+</head>
+<body>
+    <bkj-icon name="regular/angry" provider="fa" size="55px"></bkj-icon>
+    <bkj-icon name="regular/dizzy" provider="fa"></bkj-icon>
+    <bkj-icon name="circle"></bkj-icon>
+    <bkj-icon name="chevron-right"></bkj-icon>
+</body>
+</html>

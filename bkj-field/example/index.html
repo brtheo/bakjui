@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <script defer type=module>
+    import '../bkj-field.js'
+    import '../../bkj-icon/bkj-icon.js'
+
+    const field = document.querySelector('bkj-field')
+    document.querySelector('button').addEventListener('click', e => {
+        console.log(field.value)
+    })
+   
+    </script>
+    <style>
+        body {
+            background: #252525;
+            
+        }
+        bkj-field {
+            margin: 10px;  }
+    </style>
+</head>
+<body>
+    <bkj-field></bkj-field>
+    <button>kkk</button>
+</body>
+</html>

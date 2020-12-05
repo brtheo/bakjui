@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer type=module>
+    import '../bkj-radio-group.js'
+    import '../bkj-radio.js'
+    
+    const output = document.querySelector('output'),
+        bkjRadioGroup = document.querySelector('bkj-radio-group')
+        bkjRadioGroup.addEventListener('bkjRadio:Changed', (e) => output.innerHTML = JSON.stringify(e.detail.value))
+    </script>
+    <style>
+        @import url('../../bkj-core/rgb-colors.css');
+        :root {
+            --bkj-icon-button-size: 48px;
+        }
+
+        body {
+            margin: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: #252525;
+            display: flex;
+            place-content: center;
+            color: white;
+        }
+        .container {
+            align-self: center;
+            display: flex;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <bkj-radio-group>
+            <bkj-radio value="bonjour">Bonjour</bkj-radio>
+            <bkj-radio value="bon">Bon</bkj-radio>
+        </bkj-radio-group>
+    </section>
+    <output></output>
+</body>
+
+</html>

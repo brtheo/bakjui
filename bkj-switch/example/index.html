@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <script defer type=module>
+    import '../bkj-switch.js'
+    import '../../bkj-icon/bkj-icon.js'
+    document.body.querySelectorAll('bkj-button').forEach(e => e.addEventListener('click', (ev) => console.log('hello')))
+    
+    </script>
+    <style>
+        body {
+            background: #252525;
+            display: flex;
+            place-content: center;
+            height: 100vh;
+        }
+        bkj-switch {
+            margin: auto 0;
+            --switchOffset: 4px;
+            --switchSize: 18px;
+        }
+        bkj-switch[pressed] {
+        }
+    </style>
+</head>
+<body>
+    <bkj-switch></bkj-switch>
+    <bkj-switch pressed>
+        <bkj-icon slot="off" size="16px" name="weather-sunny"></bkj-icon>
+        <bkj-icon slot="on" size="16px" name="weather-night"></bkj-icon>
+    </bkj-switch>
+</body>
+</html>

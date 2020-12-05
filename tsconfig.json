@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "module": "ES2015",
+        "target": "ES2020",
+        "moduleResolution": "node",
+        "lib": ["ESNext.Array","DOM","ESNext","ES2017","ES2017.Intl"],
+        "experimentalDecorators": true,
+        "baseUrl": "./",
+        "declaration": true,
+        "declarationDir": "d/"
+    },
+    "exclude": []
+}

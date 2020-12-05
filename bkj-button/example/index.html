@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <script defer type=module>
+    import '../bkj-button.js'
+    import '../../bkj-icon/bkj-icon.js'
+    document.body.querySelectorAll('bkj-button').forEach(e => e.addEventListener('click', (ev) => console.log('hello')))
+    
+    </script>
+    <style>
+        body {
+            background: #252525;
+        }
+        bkj-button {
+            margin: 10px;  }
+    </style>
+</head>
+<body>
+    <bkj-button flat>Hello</bkj-button>
+    <bkj-button disabled>Hello</bkj-button>
+    <bkj-button icon="before">Add <bkj-icon slot="icon" name="account"></bkj-icon></bkj-button>
+    <bkj-button disabled icon="before">Add <bkj-icon slot="icon" name="account"></bkj-icon></bkj-button>
+    <bkj-button icon="after">Add <bkj-icon slot="icon" name="account"></bkj-icon></bkj-button>
+    <bkj-button round><bkj-icon slot="icon" name="magnify"></bkj-icon></bkj-button>
+    <bkj-button flat round><bkj-icon slot="icon" name="magnify"></bkj-icon></bkj-button>
+</body>
+</html>

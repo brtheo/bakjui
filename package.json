@@ -1,0 +1,26 @@
+{
+  "name": "bkjui-components",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "dev:icon": "es-dev-server --config=bkj-icon/es-dev-server.config.js --watch",
+    "dev:menu": "es-dev-server --config=bkj-menu/es-dev-server.config.js --watch",
+    "dev:toast": "es-dev-server --config=bkj-toast/es-dev-server.config.js --watch",
+    "dev:radio": "es-dev-server --config=bkj-radio/es-dev-server.config.js --watch",
+    "dev:select": "es-dev-server --config=bkj-select/es-dev-server.config.js --watch",
+    "dev:button": "es-dev-server --config=bkj-button/es-dev-server.config.js --watch",
+    "dev:switch": "es-dev-server --config=bkj-switch/es-dev-server.config.js --watch",
+    "dev:field": "es-dev-server --config=bkj-field/es-dev-server.config.js --watch"
+  },
+  "keywords": [
+    "web-components"
+  ],
+  "author": "brossier theo",
+  "license": "MIT",
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "es-dev-server": "^1.48.1"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+    <script defer type=module>
+    import '../bkj-bottom-bar.js'
+    import '../../bkj-icon/bkj-icon.js'
+    import '../../bkj-button/bkj-button.js'
+   
+    </script>
+    <style>
+    body {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    bkj-bottom-bar {
+            margin: auto 0;
+    }
+    bkj-icon {
+        fill: black;
+        padding: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      #items {
+        display: flex;
+        height: 100%;
+        padding: 0 4px;
+        place-items: center;
+        font-size: 1.1rem;
+        font-family: 'Arial Rounded MT';
+        color: cornsilk;
+      }
+      #items > bkj-icon:nth-child(2) {
+          margin-left: auto
+      }
+    </style>
+</head>
+<body>
+    <bkj-bottom-bar position="75">
+        <bkj-button slot="fab" round>
+            <bkj-icon slot="icon" size="35px" name="plus"></bkj-icon>
+        </bkj-button>
+        <section id="items" slot="menu-items"> 
+            <bkj-icon name="menu"></bkj-icon>
+            <bkj-icon name="magnify"></bkj-icon>
+            <bkj-icon name="dots-vertical"></bkj-icon>
+        </section>
+    </bkj-bottom-bar>
+</body>
+</html>
